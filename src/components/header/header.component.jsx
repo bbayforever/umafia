@@ -35,7 +35,7 @@ const Header = ({currentUser, hidden}) => (
             <CartDropdown />
         }
     </div>
-)
+);
 
 const mapStateToProps = ({user: { currentUser }, cart: { hidden }}) => ({
     currentUser,
