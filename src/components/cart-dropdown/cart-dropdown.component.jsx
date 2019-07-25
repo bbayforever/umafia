@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './cart-dropdown.styles.scss';
 import { connect } from 'react-redux';
@@ -15,9 +16,9 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       {
         cartItems.length ? (
           cartItems.map(cartItem => (
-          <CartItem key={cartItem.id} item={cartItem} />
+            <CartItem key={cartItem.id} item={cartItem} />
           ))
-        ) : ( 
+        ) : (
           <span className="empty-message">Your cart is empty</span>
         )}
     </div>
@@ -26,7 +27,8 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       dispatch(toggleCartHidden());
     }}
     >
-    Go to checkout</CustomButton>
+    Go to checkout
+    </CustomButton>
   </div>
 );
 

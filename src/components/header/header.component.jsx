@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/logo1.svg';
+import { ReactComponent as Logo } from '../../assets/shirt.svg';
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -14,8 +14,17 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import './header.styles.scss';
 
-const Header = ({currentUser, hidden}) => (
-    <div className = 'header'>
+const Header = ({currentUser, hidden}) => {
+    const color = {
+        colorRed: Math.random() * (255 - 100) + 100,
+        colorGreen: Math.random() * (255 - 100) + 100,
+        colorBlue: Math.random() * (255 - 100) + 100,
+    }
+    console.log(color)
+    return (
+    <div className = 'header' style = {{
+        backgroundColor: `rgb(${color.colorRed}, ${color.colorGreen}, ${color.colorBlue})`
+    }}>
         <Link to = "/" className = 'logo-container'>
             <Logo  className = 'logo' />
         </Link>
@@ -40,7 +49,7 @@ const Header = ({currentUser, hidden}) => (
             <CartDropdown />
         }
     </div>
-);
+)};
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,

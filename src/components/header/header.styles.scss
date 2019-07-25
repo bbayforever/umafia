@@ -2,18 +2,20 @@
     height: 70px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 25px;
     font-weight: bold;
-  
+    padding: 0px 20px;
+    
     .logo-container {
      
      .logo{
        height: 100%;
        width: auto;
+
        
        &:hover{
-        background-color: red;
+        filter: invert(1);
 
        }
      }
