@@ -71,13 +71,13 @@ const Header = ({ currentUser, hidden }) => {
             </Nav.Link>
             {
               currentUser
-                ? <Nav.Link className="option">
+                ? <Nav.Link>
                   <Link onClick={() => auth.signOut()}>
                     Sign out
                   </Link>
                 </Nav.Link>
-                : <Nav.Link href="/signin" className="option">
-                  <Link to="/signin" className="option">
+                : <Nav.Link href="/signin">
+                  <Link to="/signin">
                     Sign in
                   </Link>
                 </Nav.Link>
