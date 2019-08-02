@@ -14,7 +14,8 @@ class SignUp extends React.Component{
             displayName: '',
             email: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
+            errorText: '',
         }
     }
     handleSubmit = async event => {
@@ -35,10 +36,11 @@ class SignUp extends React.Component{
             displayName: '',
             email: '',
             password: '',
-            confirmPassword: ''
+            confirmPassword: '',
+            errorText: '',
             })
         } catch (error) {
-            console.error(error);   
+            this.setState({errorText: error.message}) 
         }
     };
 
@@ -87,6 +89,7 @@ class SignUp extends React.Component{
                         label = 'Confirm Password'
                         required
                         />
+                    <div className="error">{this.state.errorText}</div>    
                         <CustomButton type = 'submit'>SIGN UP</CustomButton>
                 </form>
             </div>

@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     width: 380px;
-  
+    .error {
+      color: red;
+      margin-bottom: 20px;
+    }
     .title {
       margin: 10px 0;
     }
