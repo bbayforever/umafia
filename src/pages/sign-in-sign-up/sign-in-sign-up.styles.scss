@@ -4,7 +4,14 @@
     display: flex;
     justify-content: space-between;
     margin: 40px auto;
-
-
   }
   
+  @media screen and (max-width: 900px) {
+    .sign-in-up {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      margin: 40px 60px;
+    }
+  }
